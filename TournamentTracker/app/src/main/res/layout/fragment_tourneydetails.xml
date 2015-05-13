@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:padding="5dp" android:gravity="center_horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:id="@+id/tourneyName"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Test Name"/>
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/playerLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Player Name"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/payoutLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Payout"
+                android:layout_marginLeft="0dp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/pointsLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Points"
+                android:layout_marginLeft="0dp"/>
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p1NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p1PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p1PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p2NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p2PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p2PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p3NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p3PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p3PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p4NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p4PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p4PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p5NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p5PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p5PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p6NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p6PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p6PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p7NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p7PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p7PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p8NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p8PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p8PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p9NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p9PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p9PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/p10NameLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="10dp"
+                android:text="Richard Pingree"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p10PayoutLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:layout_marginLeft="0dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/p10PointsLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="9"
+                android:layout_marginLeft="10dp"/>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

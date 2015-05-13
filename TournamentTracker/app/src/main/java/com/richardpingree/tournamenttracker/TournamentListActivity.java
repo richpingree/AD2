@@ -1,6 +1,7 @@
 package com.richardpingree.tournamenttracker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.richardpingree.tournamenttracker.Fragments.TournamentListFragment;
@@ -34,6 +35,9 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
     @Override
     public void viewTournament(int position) {
+        Intent tourneyDetailIntent = new Intent(this, TourneyDetailsActivity.class);
+        tourneyDetailIntent.putExtra(TourneyDetailsActivity.TOURNEYEXTRA, mTournamentResultList.get(position));
+        startActivity(tourneyDetailIntent);
 
     }
 

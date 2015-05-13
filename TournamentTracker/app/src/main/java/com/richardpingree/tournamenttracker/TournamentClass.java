@@ -126,7 +126,7 @@ public class TournamentClass implements Serializable {
         this.p2Name = p2Name;
     }
 
-    public int getP12Payout(){
+    public int getP2Payout(){
         return p2Payout;
     }
 

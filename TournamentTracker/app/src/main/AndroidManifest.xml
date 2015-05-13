@@ -19,6 +19,9 @@
 
         <activity android:name=".TournamentListActivity"
             android:label="Tournaments"/>
+
+        <activity android:name=".TourneyDetailsActivity"
+            android:label="Tournament Results"/>
     </application>
 
 </manifest>
