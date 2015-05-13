@@ -53,6 +53,7 @@ public class TournamentClass implements Serializable {
                            String player8Name, int player8Payout, int player8Points,
                            String player9Name, int player9Payout, int player9Points,
                            String player10Name, int player10Payout, int player10Points){
+        tournyName = tournamentName;
         p1Name = player1Name;
         p1Payout = player1Payout;
         p1Points = player1Points;
