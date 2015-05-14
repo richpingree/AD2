@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.richardpingree.tournamenttracker.R;
+import com.richardpingree.tournamenttracker.TournamentAdapter;
 import com.richardpingree.tournamenttracker.TournamentClass;
 
 import java.util.ArrayList;
@@ -25,6 +25,7 @@ public class TournamentListFragment extends Fragment {
 
     private TournamentListener mListener;
     private ArrayList<TournamentClass> mTourneyList;
+    TournamentAdapter mAdapter;
     private int mItemSelected = 0;
 
     public interface TournamentListener{
@@ -63,9 +64,8 @@ public class TournamentListFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         ListView tourneyListView = (ListView) getView().findViewById(R.id.tourneyList);
-//        ArrayAdapter<TournamentClass> adapter = new ArrayAdapter<TournamentClass>(getActivity(), android.R.layout.simple_list_item_1, mListener.getTournaments());
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, mListener.getTournaments());
-        tourneyListView.setAdapter(adapter);
+        mAdapter = new TournamentAdapter(getActivity(), mListener.getTournaments());
+        tourneyListView.setAdapter(mAdapter);
 
         tourneyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

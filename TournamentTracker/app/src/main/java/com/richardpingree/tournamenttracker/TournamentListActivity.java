@@ -3,6 +3,8 @@ package com.richardpingree.tournamenttracker;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.richardpingree.tournamenttracker.Fragments.TournamentListFragment;
 
@@ -13,8 +15,10 @@ import java.util.ArrayList;
  */
 public class TournamentListActivity  extends Activity implements TournamentListFragment.TournamentListener{
 
+
     private final String TAG = "TournamentListActivity.TAG";
 
+    private static final int ADDREQUEST = 0;
     private ArrayList<TournamentClass> mTournamentResultList;
 
     @Override
@@ -53,6 +57,26 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
     @Override
     public void addTournament() {
+        Intent addTourneyIntent = new Intent(this, TourneyFormActivity.class);
+        startActivityForResult(addTourneyIntent, ADDREQUEST);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tourney, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_add:
+                addTournament();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

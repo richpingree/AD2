@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:padding="5dp" android:gravity="center_horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/tourneyNameLabel"
+                android:text="Tournament Title:"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/tourneyInput"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">>
+        <TableRow android:padding="5dp" >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="60dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Player Name"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="60dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Payout"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="30dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Points"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p1NameInput"
+                android:hint="Player 1"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center_horizontal"
+                android:id="@+id/p1PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center_horizontal"
+                android:id="@+id/p1PointsInput"
+                android:hint="9"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p2NameInput"
+                android:hint="Player 2"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center_horizontal"
+                android:id="@+id/p2PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center_horizontal"
+                android:id="@+id/p2PointsInput"
+                android:hint="8"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="3."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p3NameInput"
+                android:hint="Player 3"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p3PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p3PointsInput"
+                android:hint="7"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="4."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p4NameInput"
+                android:hint="Player 4"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p4PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p4PointsInput"
+                android:hint="6"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="5."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p5NameInput"
+                android:hint="Player 5"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p5PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p5PointsInput"
+                android:hint="5"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="6."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p6NameInput"
+                android:hint="Player 6"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p6PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p6PointsInput"
+                android:hint="4"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="7."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p7NameInput"
+                android:hint="Player 7"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p7PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p7PointsInput"
+                android:hint="3"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="8."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p8NameInput"
+                android:hint="Player 8"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p8PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p8PointsInput"
+                android:hint="2"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="9."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p9NameInput"
+                android:hint="Player 9"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p9PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p9PointsInput"
+                android:hint="1"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="10."/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p10NameInput"
+                android:hint="Player 10"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p10PayoutInput"
+                android:hint="100" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/p10PointsInput"
+                android:hint="0"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:gravity="center_horizontal">
+            <Button
+                android:layout_weight="0"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/SaveBtn"
+                android:text="Save"/>
+
+            <Button
+                android:layout_weight="0"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/Cancel"
+                android:text="Cancel"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>

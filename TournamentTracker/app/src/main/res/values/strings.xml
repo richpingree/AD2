@@ -2,7 +2,7 @@
     <string name="app_name">TournamentTracker</string>
 
     <string name="title_section1">Timer</string>
-    <string name="title_section2">Tournament Tracker</string>
+    <string name="title_section2">Tournaments</string>
     <string name="title_section3">Section 3</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
