@@ -3,6 +3,7 @@ package com.richardpingree.tournamenttracker;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -59,15 +60,20 @@ public class TournamentListActivity  extends Activity implements TournamentListF
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tournamentlist);
 
-        if (savedInstanceState == null){
-            getFragmentManager().beginTransaction().replace(R.id.container, new TournamentListFragment()).commit();
-        }
+
 
 
         mTournamentResultList = new ArrayList<TournamentClass>();
 
-        mTournamentResultList.add(new TournamentClass("First Tournament", "John Smith", 100, 9, "Richard Pingree", 75, 8,
-                "Fred", 50, 7, "Jason", 25, 6, "Kyle", 25, 5, "Dusty", 25, 4, "Darin", 25, 3, "Todd", 25, 2, "Chad", 25, 1, "Matt", 25, 0));
+//        mTournamentResultList.add(new TournamentClass("First Tournament", "John Smith", 100, 9, "Richard Pingree", 75, 8,
+//                "Fred", 50, 7, "Jason", 25, 6, "Kyle", 25, 5, "Dusty", 25, 4, "Darin", 25, 3, "Todd", 25, 2, "Chad", 25, 1, "Matt", 25, 0));
+        if (TournamentFileUtility.tourneyLoad(this) != null){
+            mTournamentResultList = TournamentFileUtility.tourneyLoad(this);
+        }
+
+        if (savedInstanceState == null){
+            getFragmentManager().beginTransaction().replace(R.id.container, new TournamentListFragment()).commit();
+        }
     }
 
     @Override
@@ -119,6 +125,13 @@ public class TournamentListActivity  extends Activity implements TournamentListF
             newTournament.p10Points = data.getIntExtra(ADDPLAYER10POINTS, 0);
 
             mTournamentResultList.add(newTournament);
+
+            if (newTournament != null){
+                TournamentFileUtility.tourneySave(this, newTournament);
+                Log.i(TAG, "data saved");
+            }else{
+                Log.i(TAG, "data did not save!");
+            }
             TournamentListFragment tlf = (TournamentListFragment) getFragmentManager().findFragmentById(R.id.container);
             try{
                 tlf.updateTourneyList();
@@ -138,6 +151,13 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
     @Override
     public void deleteTournament(int position) {
+        mTournamentResultList.remove(position);
+        TournamentListFragment tlf = (TournamentListFragment) getFragmentManager().findFragmentById(R.id.container);
+        try{
+            tlf.updateTourneyList();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 

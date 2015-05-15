@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import com.richardpingree.tournamenttracker.R;
 import com.richardpingree.tournamenttracker.TournamentClass;
+import com.richardpingree.tournamenttracker.TournamentFileUtility;
 
 /**
  * Created by Richard Pingree APD2 1505 on 5/14/15.
@@ -364,6 +365,7 @@ public class TourneyFormFragment extends Fragment{
                     Log.i(TAG, String.valueOf(newTournament.p10Points));
                 }
                 mListener.addTourney(newTournament);
+                //TournamentFileUtility.tourneySave(getActivity(), newTournament);
             }
         });
 
