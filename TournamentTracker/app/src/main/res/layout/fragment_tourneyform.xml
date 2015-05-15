@@ -85,7 +85,8 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:gravity="center_horizontal"
                 android:id="@+id/p1PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -95,7 +96,8 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:gravity="center_horizontal"
                 android:id="@+id/p1PointsInput"
-                android:hint="9"/>
+                android:hint="9"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -123,7 +125,8 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:gravity="center_horizontal"
                 android:id="@+id/p2PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -133,7 +136,8 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:gravity="center_horizontal"
                 android:id="@+id/p2PointsInput"
-                android:hint="8"/>
+                android:hint="8"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -161,7 +165,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p3PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -171,7 +176,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p3PointsInput"
-                android:hint="7"/>
+                android:hint="7"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -199,7 +205,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p4PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -209,7 +216,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p4PointsInput"
-                android:hint="6"/>
+                android:hint="6"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -237,7 +245,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p5PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -247,7 +256,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p5PointsInput"
-                android:hint="5"/>
+                android:hint="5"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -275,7 +285,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p6PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -285,7 +296,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p6PointsInput"
-                android:hint="4"/>
+                android:hint="4"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -313,7 +325,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p7PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -323,7 +336,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p7PointsInput"
-                android:hint="3"/>
+                android:hint="3"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -351,7 +365,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p8PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -361,7 +376,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p8PointsInput"
-                android:hint="2"/>
+                android:hint="2"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -389,7 +405,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p9PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -399,7 +416,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p9PointsInput"
-                android:hint="1"/>
+                android:hint="1"
+                android:inputType="number"/>
         </TableRow>
 
         <TableRow>
@@ -427,7 +445,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p10PayoutInput"
-                android:hint="100" />
+                android:hint="100"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_height="wrap_content"
@@ -437,7 +456,8 @@
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/p10PointsInput"
-                android:hint="0"/>
+                android:hint="0"
+                android:inputType="number"/>
         </TableRow>
 
     </TableLayout>
@@ -452,7 +472,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/SaveBtn"
+                android:id="@+id/saveBtn"
                 android:text="Save"/>
 
             <Button
@@ -461,7 +481,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/Cancel"
+                android:id="@+id/cancelBtn"
                 android:text="Cancel"/>
         </TableRow>
     </TableLayout>

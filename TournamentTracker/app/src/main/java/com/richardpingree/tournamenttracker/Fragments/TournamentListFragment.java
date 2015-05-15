@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import com.richardpingree.tournamenttracker.R;
@@ -26,7 +27,7 @@ public class TournamentListFragment extends Fragment {
     private TournamentListener mListener;
     private ArrayList<TournamentClass> mTourneyList;
     TournamentAdapter mAdapter;
-    private int mItemSelected = 0;
+    private int mItemSelected = -1;
 
     public interface TournamentListener{
         public void viewTournament(int position);
@@ -73,5 +74,11 @@ public class TournamentListFragment extends Fragment {
                 mListener.viewTournament(position);
             }
         });
+    }
+
+    public void updateTourneyList(){
+        ListView tourneyList = (ListView) getView().findViewById(R.id.tourneyList);
+        BaseAdapter adapter = (BaseAdapter) tourneyList.getAdapter();
+        adapter.notifyDataSetChanged();
     }
 }
