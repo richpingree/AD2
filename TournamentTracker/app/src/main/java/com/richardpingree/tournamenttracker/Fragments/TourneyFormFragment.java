@@ -15,7 +15,6 @@ import android.widget.EditText;
 
 import com.richardpingree.tournamenttracker.R;
 import com.richardpingree.tournamenttracker.TournamentClass;
-import com.richardpingree.tournamenttracker.TournamentFileUtility;
 
 /**
  * Created by Richard Pingree APD2 1505 on 5/14/15.
@@ -41,6 +40,7 @@ public class TourneyFormFragment extends Fragment{
 
     public interface TourneyFormListener{
         public void addTourney(TournamentClass newTournament);
+        public void cancelTourney();
     }
 
     public TourneyFormFragment(){
@@ -372,6 +372,7 @@ public class TourneyFormFragment extends Fragment{
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mListener.cancelTourney();
 
             }
         });

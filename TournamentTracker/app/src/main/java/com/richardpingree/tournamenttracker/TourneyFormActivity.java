@@ -71,4 +71,11 @@ public class TourneyFormActivity extends Activity implements TourneyFormFragment
         finish();
 
     }
+
+    @Override
+    public void cancelTourney() {
+        finish();
+    }
+
+
 }
