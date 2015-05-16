@@ -65,8 +65,10 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
         mTournamentResultList = new ArrayList<TournamentClass>();
 
+//        Test Data
 //        mTournamentResultList.add(new TournamentClass("First Tournament", "John Smith", 100, 9, "Richard Pingree", 75, 8,
 //                "Fred", 50, 7, "Jason", 25, 6, "Kyle", 25, 5, "Dusty", 25, 4, "Darin", 25, 3, "Todd", 25, 2, "Chad", 25, 1, "Matt", 25, 0));
+
         if (TournamentFileUtility.tourneyLoad(this) != null){
             mTournamentResultList = TournamentFileUtility.tourneyLoad(this);
         }

@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
- * Created by richardpingree on 5/15/15.
+ * Created by Richard Pingree APD2 1505 on 5/15/15.
  */
 public class TournamentFileUtility {
 
