@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.richardpingree.tournamenttracker.R;
@@ -17,12 +19,14 @@ import com.richardpingree.tournamenttracker.TournamentClass;
  */
 public class TourneyDetailsFragment extends Fragment {
 
-    private final String TAG = "TourneyDetailsFragment.TAG";
+    private final String TAG = "TDetailsFragment.TAG";
 
     private TourneyDetailsListener mListener;
 
     public interface TourneyDetailsListener{
         public TournamentClass getTourney();
+        public int getDelete();
+        public void deleteTourney();
 
     }
 
@@ -124,5 +128,16 @@ public class TourneyDetailsFragment extends Fragment {
         textView.setText("$" + mListener.getTourney().getP10Payout());
         textView = (TextView)getView().findViewById(R.id.p10PointsLabel);
         textView.setText("" + mListener.getTourney().getP10Points());
+
+        if (mListener.getDelete()> 0){
+            Button delBtn = (Button) getView().findViewById(R.id.tDeleteBtn);
+            delBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i(TAG, "Delete");
+                    mListener.deleteTourney();
+                }
+            });
+        }
     }
 }

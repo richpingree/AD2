@@ -75,7 +75,8 @@ public class TournamentListFragment extends Fragment {
         tourneyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mListener.viewTournament(position);
+               // mListener.viewTournament(position);
+                mListener.deleteTournament(position);
             }
         });
     }

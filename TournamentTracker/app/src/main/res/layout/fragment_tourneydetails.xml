@@ -300,6 +300,12 @@
                 android:layout_marginLeft="10dp"/>
 
         </TableRow>
+
     </TableLayout>
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/tDeleteBtn"
+        android:text="Delete"/>
 
 </LinearLayout>

@@ -11,11 +11,14 @@ import com.richardpingree.tournamenttracker.Fragments.TourneyDetailsFragment;
  */
 public class TourneyDetailsActivity extends Activity implements TourneyDetailsFragment.TourneyDetailsListener{
 
+
     private final String TAG = "TourneyDetailsActivity.TAG";
 
     private TournamentClass mTournament;
+    private int mDelete;
 
     public static final String TOURNEYEXTRA = "Tournament";
+    public static final String DELETETOURNEYEXTRA = "Delete";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,26 @@ public class TourneyDetailsActivity extends Activity implements TourneyDetailsFr
         Intent detailIntent = getIntent();
         if (detailIntent != null){
             mTournament = (TournamentClass) detailIntent.getSerializableExtra(TOURNEYEXTRA);
+            mDelete = detailIntent.getIntExtra(DELETETOURNEYEXTRA, 0);
         }
     }
 
     @Override
     public TournamentClass getTourney() {
         return mTournament;
+    }
+
+    @Override
+    public int getDelete() {
+        return mDelete;
+    }
+
+    @Override
+    public void deleteTourney() {
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra(TournamentListActivity.DELETETOURNEYEXTRA, mDelete);
+        setResult(RESULT_OK, returnIntent);
+        finish();
+
     }
 }

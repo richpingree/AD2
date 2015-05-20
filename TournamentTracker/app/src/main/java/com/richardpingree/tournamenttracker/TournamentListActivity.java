@@ -137,6 +137,14 @@ public class TournamentListActivity  extends Activity implements TournamentListF
             }catch (Exception e){
                 e.printStackTrace();
             }
+        } else if (resultCode == Activity.RESULT_OK && requestCode == DELETEREQUEST){
+            mTournamentResultList.remove(data.getIntExtra(DELETETOURNEYEXTRA,0));
+            TournamentListFragment tlf = (TournamentListFragment) getFragmentManager().findFragmentById(R.id.container);
+            try{
+                tlf.updateTourneyList();
+            }catch  (Exception e){
+                e.printStackTrace();
+            }
         }
     }
 
@@ -150,14 +158,10 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
     @Override
     public void deleteTournament(int position) {
-        mTournamentResultList.remove(position);
-        TournamentListFragment tlf = (TournamentListFragment) getFragmentManager().findFragmentById(R.id.container);
-        try{
-            tlf.updateTourneyList();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
+        Intent deleteIntent = new Intent(this, TourneyDetailsActivity.class);
+        deleteIntent.putExtra(TourneyDetailsActivity.TOURNEYEXTRA, mTournamentResultList.get(position));
+        deleteIntent.putExtra(TourneyDetailsActivity.DELETETOURNEYEXTRA, position);
+        startActivityForResult(deleteIntent, DELETEREQUEST);
     }
 
     @Override
