@@ -5,6 +5,9 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -63,6 +66,7 @@ public class TournamentListFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        setHasOptionsMenu(true);
 
         ListView tourneyListView = (ListView) getView().findViewById(R.id.tourneyList);
         mAdapter = new TournamentAdapter(getActivity(), mListener.getTournaments());
@@ -80,5 +84,23 @@ public class TournamentListFragment extends Fragment {
         ListView tourneyList = (ListView) getView().findViewById(R.id.tourneyList);
         BaseAdapter adapter = (BaseAdapter) tourneyList.getAdapter();
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.tourney, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_add:
+                mListener.addTournament();
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

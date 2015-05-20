@@ -25,6 +25,9 @@
 
         <activity android:name=".TourneyFormActivity"
             android:label="Add Tournament Results"/>
+
+        <activity android:name=".BlindListActivity"
+            android:label="Blind Levels"/>
     </application>
 
 </manifest>

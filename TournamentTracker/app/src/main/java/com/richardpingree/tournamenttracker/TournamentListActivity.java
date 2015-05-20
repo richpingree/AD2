@@ -3,9 +3,6 @@ package com.richardpingree.tournamenttracker;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.richardpingree.tournamenttracker.Fragments.TournamentListFragment;
 
@@ -130,9 +127,9 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
             if (newTournament != null){
                 TournamentFileUtility.tourneySave(this, newTournament);
-                Log.i(TAG, "data saved");
+                //Log.i(TAG, "data saved");
             }else{
-                Log.i(TAG, "data did not save!");
+               //Log.i(TAG, "data did not save!");
             }
             TournamentListFragment tlf = (TournamentListFragment) getFragmentManager().findFragmentById(R.id.container);
             try{
@@ -175,21 +172,21 @@ public class TournamentListActivity  extends Activity implements TournamentListF
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.tourney, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_add:
-                addTournament();
-                break;
-            default:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.tourney, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.action_add:
+//                addTournament();
+//                break;
+//            default:
+//                break;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }
