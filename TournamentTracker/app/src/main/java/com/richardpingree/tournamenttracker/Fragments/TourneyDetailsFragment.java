@@ -1,10 +1,11 @@
 package com.richardpingree.tournamenttracker.Fragments;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -129,13 +130,26 @@ public class TourneyDetailsFragment extends Fragment {
         textView = (TextView)getView().findViewById(R.id.p10PointsLabel);
         textView.setText("" + mListener.getTourney().getP10Points());
 
-        if (mListener.getDelete()> 0){
+        if (mListener.getDelete()> -1){
             Button delBtn = (Button) getView().findViewById(R.id.tDeleteBtn);
             delBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i(TAG, "Delete");
-                    mListener.deleteTourney();
+                    final AlertDialog.Builder deleteAlert = new AlertDialog.Builder(getActivity());
+                    deleteAlert.setMessage("Are you sure you want to delete " + mListener.getTourney() + "?").setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            mListener.deleteTourney();
+                        }
+                    })
+                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    deleteAlert.show();
+                    //mListener.deleteTourney();
                 }
             });
         }

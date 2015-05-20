@@ -28,6 +28,9 @@
 
         <activity android:name=".BlindListActivity"
             android:label="Blind Levels"/>
+
+        <activity android:name=".BlindFormActivity"
+            android:label="Blind Form"/>
     </application>
 
 </manifest>

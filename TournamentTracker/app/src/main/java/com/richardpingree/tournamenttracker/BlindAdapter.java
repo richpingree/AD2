@@ -46,11 +46,11 @@ public class BlindAdapter extends BaseAdapter {
         }
         BlindClass blind = getItem(position);
         TextView tv = (TextView) convertView.findViewById(R.id.blindTime);
-        tv.setText(blind.getmTimer());
+        tv.setText("Timer: " + String.valueOf(blind.getmTimer()));
         tv = (TextView) convertView.findViewById(R.id.smallBlind);
-        tv.setText(blind.getmSmallBlind());
+        tv.setText("Small Blind: " + String.valueOf(blind.getmSmallBlind()));
         tv = (TextView) convertView.findViewById(R.id.bigBlind);
-        tv.setText(blind.getmBigBlind());
+        tv.setText("Big Blind: " + String.valueOf(blind.getmBigBlind()));
         return convertView;
     }
 }

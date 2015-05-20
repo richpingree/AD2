@@ -1,6 +1,7 @@
 package com.richardpingree.tournamenttracker.Fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.richardpingree.tournamenttracker.BlindListActivity;
 import com.richardpingree.tournamenttracker.R;
 
 /**
@@ -60,6 +62,8 @@ public class TimerFragment extends Fragment {
         switch (item.getItemId()){
             case R.id.action_add:
                 Log.i(TAG, "add button pressed");
+                Intent blindListIntent = new Intent(getActivity(), BlindListActivity.class);
+                startActivity(blindListIntent);
                 break;
             default:
                 break;
