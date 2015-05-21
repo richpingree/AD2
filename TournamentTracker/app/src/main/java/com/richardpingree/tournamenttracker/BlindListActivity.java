@@ -22,6 +22,7 @@ public class BlindListActivity extends Activity implements BlindListFragment.Bli
     public static int DELETEBLINDREQUEST = 0;
     public static String DELETEBLINDEXTRA = "Delete Blind";
 
+    public BlindClass newBlindLevel;
     public ArrayList<BlindClass> mBlindArrayList;
 
     @Override
@@ -42,6 +43,23 @@ public class BlindListActivity extends Activity implements BlindListFragment.Bli
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == Activity.RESULT_OK && requestCode == ADDBLINDREQUEST){
+            newBlindLevel = new BlindClass();
+
+            newBlindLevel.mTimer = data.getIntExtra(ADDBLINDEXTRATIME, 0);
+            newBlindLevel.mSmallBlind = data.getIntExtra(ADDBLINDEXTRASMALLBLIND, 0);
+            newBlindLevel.mBigBlind = data.getIntExtra(ADDBLINDEXTRABIGBLIND, 0);
+
+            mBlindArrayList.add(newBlindLevel);
+
+            BlindListFragment blf = (BlindListFragment)getFragmentManager().findFragmentById(R.id.container);
+            try{
+                blf.updateBlindList();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
     }
 
 

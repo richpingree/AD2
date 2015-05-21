@@ -167,7 +167,7 @@ public class BlindListFragment extends Fragment {
         switch (item.getItemId()){
             case R.id.action_add:
                 Log.i(TAG, "Add button clicked");
-                //mListener.addBlind();
+                mListener.addBlind();
                 break;
             default:
                 break;
