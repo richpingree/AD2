@@ -7,37 +7,38 @@ import java.io.Serializable;
  */
 public class TournamentClass implements Serializable {
 
-    public String tournyName;
-    public String p1Name;
-    public int p1Payout;
-    public int p1Points;
-    public String p2Name;
-    public int p2Payout;
-    public int p2Points;
-    public String p3Name;
-    public int p3Payout;
-    public int p3Points;
-    public String p4Name;
-    public int p4Payout;
-    public int p4Points;
-    public String p5Name;
-    public int p5Payout;
-    public int p5Points;
-    public String p6Name;
-    public int p6Payout;
-    public int p6Points;
-    public String p7Name;
-    public int p7Payout;
-    public int p7Points;
-    public String p8Name;
-    public int p8Payout;
-    public int p8Points;
-    public String p9Name;
-    public int p9Payout;
-    public int p9Points;
-    public String p10Name;
-    public int p10Payout;
-    public int p10Points;
+    public String tournyName, p1Name, p2Name, p3Name, p4Name, p5Name, p6Name, p7Name, p8Name, p9Name, p10Name;
+    //public String p1Name;
+    public int p1Payout, p1Points, p2Payout, p2Points, p3Payout, p3Points, p4Payout, p4Points,
+            p5Payout, p5Points, p6Payout, p6Points, p7Payout, p7Points, p8Payout, p8Points, p9Payout, p9Points, p10Payout, p10Points;
+    //public int p1Points;
+    //public String p2Name;
+    //public int p2Payout;
+    //public int p2Points;
+    //public String p3Name;
+    //public int p3Payout;
+    //public int p3Points;
+    //public String p4Name;
+    //public int p4Payout;
+    //public int p4Points;
+    //public String p5Name;
+    //public int p5Payout;
+    //public int p5Points;
+    //public String p6Name;
+    //public int p6Payout;
+    //public int p6Points;
+    //public String p7Name;
+    //public int p7Payout;
+    //public int p7Points;
+    //public String p8Name;
+    //public int p8Payout;
+    //public int p8Points;
+    //public String p9Name;
+    //public int p9Payout;
+    //public int p9Points;
+    //public String p10Name;
+    //public int p10Payout;
+    //public int p10Points;
 
     public TournamentClass(){
 
@@ -54,36 +55,16 @@ public class TournamentClass implements Serializable {
                            String player9Name, int player9Payout, int player9Points,
                            String player10Name, int player10Payout, int player10Points){
         tournyName = tournamentName;
-        p1Name = player1Name;
-        p1Payout = player1Payout;
-        p1Points = player1Points;
-        p2Name = player2Name;
-        p2Payout = player2Payout;
-        p2Points = player2Points;
-        p3Name = player3Name;
-        p3Payout = player3Payout;
-        p3Points = player3Points;
-        p4Name = player4Name;
-        p4Payout = player4Payout;
-        p4Points = player4Points;
-        p5Name = player5Name;
-        p5Payout = player5Payout;
-        p5Points = player5Points;
-        p6Name = player6Name;
-        p6Payout = player6Payout;
-        p6Points = player6Points;
-        p7Name = player7Name;
-        p7Payout = player7Payout;
-        p7Points = player7Points;
-        p8Name = player8Name;
-        p8Payout = player8Payout;
-        p8Points = player8Points;
-        p9Name = player9Name;
-        p9Payout = player9Payout;
-        p9Points = player9Points;
-        p10Name = player10Name;
-        p10Payout = player10Payout;
-        p10Points = player10Points;
+        p1Name = player1Name; p1Payout = player1Payout; p1Points = player1Points;
+        p2Name = player2Name; p2Payout = player2Payout; p2Points = player2Points;
+        p3Name = player3Name; p3Payout = player3Payout; p3Points = player3Points;
+        p4Name = player4Name; p4Payout = player4Payout; p4Points = player4Points;
+        p5Name = player5Name; p5Payout = player5Payout; p5Points = player5Points;
+        p6Name = player6Name; p6Payout = player6Payout; p6Points = player6Points;
+        p7Name = player7Name; p7Payout = player7Payout; p7Points = player7Points;
+        p8Name = player8Name; p8Payout = player8Payout; p8Points = player8Points;
+        p9Name = player9Name; p9Payout = player9Payout; p9Points = player9Points;
+        p10Name = player10Name; p10Payout = player10Payout; p10Points = player10Points;
     }
 
     public String getTournyName(){

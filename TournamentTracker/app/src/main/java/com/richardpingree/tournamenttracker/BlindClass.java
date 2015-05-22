@@ -1,9 +1,11 @@
 package com.richardpingree.tournamenttracker;
 
+import java.io.Serializable;
+
 /**
  * Created by Richard Pingree APD2 1505 on 5/20/15.
  */
-public class BlindClass {
+public class BlindClass implements Serializable{
 
     public int mTimer;
     public int mSmallBlind;

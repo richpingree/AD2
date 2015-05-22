@@ -15,9 +15,12 @@ public class TournamentFileUtility {
 
     public static void tourneySave(Context context, TournamentClass tournament){
 
+
         ArrayList<TournamentClass> tournamentArrayList = tourneyLoad(context);
+
         if (tournamentArrayList == null){
             tournamentArrayList = new ArrayList<TournamentClass>();
+
         }
 
         tournamentArrayList.add(tournament);
@@ -45,6 +48,7 @@ public class TournamentFileUtility {
             }else{
                 return tournamentArrayList;
             }
+
         }catch(Exception e){
             return null;
         }

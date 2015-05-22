@@ -22,7 +22,7 @@ import com.richardpingree.tournamenttracker.R;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by richardpingree on 5/18/15.
+ * Created by Richard Pingree APD2 1505 on 5/18/15.
  */
 public class TimerFragment extends Fragment {
 
