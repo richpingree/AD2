@@ -20,6 +20,7 @@
                 android:layout_width="100dp"
                 android:layout_weight="0"
                 android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:inputType="number"
                 android:id="@+id/timeInput"/>
@@ -38,6 +39,7 @@
                 android:layout_width="100dp"
                 android:layout_weight="0"
                 android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:inputType="number"
                 android:id="@+id/smallBlindInput"/>
@@ -56,6 +58,7 @@
                 android:layout_width="100dp"
                 android:layout_weight="0"
                 android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:inputType="number"
                 android:id="@+id/bigBlindInput"/>
