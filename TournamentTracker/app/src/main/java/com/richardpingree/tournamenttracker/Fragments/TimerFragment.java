@@ -39,7 +39,7 @@ public class TimerFragment extends Fragment {
     public static final String ADDARRAYEXTRAS = "add Array";
     private TimerListener mListener;
     private CountDownTimer countDownTimer;
-    private long startTime = 1800 * 1000;
+    private long startTime = 60 * 1000;
     private final long interval = 1 * 1000;
     private ArrayList<BlindClass> BlindArray;
     long timeremaining;
@@ -221,14 +221,19 @@ public class TimerFragment extends Fragment {
 
         @Override
         public void onFinish() {
-            currentBlind++;
-            if (currentBlind < BlindArray.size() && currentBlind > 0) {
-                startTime = BlindArray.get(currentBlind).getmTimer();
-                sBlind = BlindArray.get(currentBlind).getmSmallBlind();
-                bBlind = BlindArray.get(currentBlind).getmBigBlind();
+            if (BlindArray.size() > 0) {
+                currentBlind++;
+                if (currentBlind < BlindArray.size() && currentBlind > 0) {
+                    startTime = BlindArray.get(currentBlind).getmTimer();
+                    sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                    bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                    timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                    smallBlind.setText(String.valueOf(sBlind));
+                    bigBlind.setText(String.valueOf(bBlind));
+                    countDownTimer.start();
+                }
+            }else{
                 timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
-                smallBlind.setText(String.valueOf(sBlind));
-                bigBlind.setText(String.valueOf(bBlind));
                 countDownTimer.start();
             }
         }
