@@ -170,29 +170,33 @@ public class TimerFragment extends Fragment {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder resetAlert = new AlertDialog.Builder(getActivity());
-                resetAlert.setMessage("Are you sure you want to reset the tournament?").setPositiveButton("Reset", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        currentBlind = 0;
-                        countDownTimer.cancel();
-                        startTime = BlindArray.get(currentBlind).getmTimer();
-                        sBlind = BlindArray.get(currentBlind).getmSmallBlind();
-                        bBlind = BlindArray.get(currentBlind).getmBigBlind();
-                        timer.setText(""+String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
-                        smallBlind.setText(String.valueOf(sBlind));
-                        bigBlind.setText(String.valueOf(bBlind));
-                        countDownTimer.onTick(startTime);
-                    }
-                })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                resetAlert.show();
-
+                if (BlindArray.size() != 0) {
+                    AlertDialog.Builder resetAlert = new AlertDialog.Builder(getActivity());
+                    resetAlert.setMessage("Are you sure you want to reset the tournament?").setPositiveButton("Reset", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            currentBlind = 0;
+                            countDownTimer.cancel();
+                            startTime = BlindArray.get(currentBlind).getmTimer();
+                            sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                            bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                            timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                            smallBlind.setText(String.valueOf(sBlind));
+                            bigBlind.setText(String.valueOf(bBlind));
+                            countDownTimer.onTick(startTime);
+                        }
+                    })
+                            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    resetAlert.show();
+                }else{
+                    countDownTimer.cancel();
+                    timer.setText(""+String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                }
             }
         });
 
