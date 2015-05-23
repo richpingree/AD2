@@ -59,8 +59,11 @@ public class BlindFormFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         time = (EditText) getView().findViewById(R.id.timeInput);
+        time.setText(String.valueOf(30));
         sBlind = (EditText) getView().findViewById(R.id.smallBlindInput);
+        sBlind.setText(String.valueOf(0));
         bBlind = (EditText) getView().findViewById(R.id.bigBlindInput);
+        bBlind.setText(String.valueOf(0));
 
         save = (Button) getView().findViewById(R.id.blindSave);
         cancel = (Button) getView().findViewById(R.id.blindCancel);
