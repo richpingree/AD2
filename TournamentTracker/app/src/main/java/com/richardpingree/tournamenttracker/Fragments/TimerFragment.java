@@ -1,6 +1,9 @@
 package com.richardpingree.tournamenttracker.Fragments;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -16,9 +19,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.richardpingree.tournamenttracker.BlindClass;
 import com.richardpingree.tournamenttracker.BlindListActivity;
 import com.richardpingree.tournamenttracker.R;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,18 +31,44 @@ import java.util.concurrent.TimeUnit;
  */
 public class TimerFragment extends Fragment {
 
+
+
     private final String TAG = "TimerFragment.TAG";
 
+    public static final int ADDEXTRAS = 0;
+    public static final String ADDARRAYEXTRAS = "add Array";
+    private TimerListener mListener;
     private CountDownTimer countDownTimer;
-    private final long startTime = 1800 * 1000;
+    private long startTime = 1800 * 1000;
     private final long interval = 1 * 1000;
+    private ArrayList<BlindClass> BlindArray;
+    long timeremaining;
+    int sBlind, bBlind;
+    int currentBlind = 0;
     TextView timer, smallBlind, bigBlind;
     ImageButton prevBtn, playBtn, pauseBtn, nextBtn;
     Button resetButton;
 
+    public interface TimerListener {
+        public ArrayList<BlindClass> getBlinds();
+    }
+
 
     public TimerFragment(){
 
+
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+
+        if (activity instanceof TimerListener){
+            mListener = (TimerListener) activity;
+        }else{
+            throw new IllegalArgumentException("Containing activity must implement TimerListener interface");
+        }
     }
 
     @Nullable
@@ -47,26 +78,50 @@ public class TimerFragment extends Fragment {
         return rootView;
     }
 
+
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
 
+        BlindArray = mListener.getBlinds();
+
+        //Log.i(TAG, String.valueOf(BlindArray.get(0).getmTimer()) + " " + String.valueOf(BlindArray.get(0).getmSmallBlind()) + " " + String.valueOf(BlindArray.get(0).getmBigBlind()));
+        if (BlindArray.size() > 0){
+            startTime = BlindArray.get(currentBlind).getmTimer();
+            sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+            bBlind = BlindArray.get(currentBlind).getmBigBlind();
+
+        }
         countDownTimer = new MyCountDownTimer(startTime, interval);
 
         timer = (TextView)getView().findViewById(R.id.timerView);
         timer.setText(""+String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+
         prevBtn = (ImageButton)getView().findViewById(R.id.previousBtn);
         playBtn = (ImageButton)getView().findViewById(R.id.playBtn);
         pauseBtn = (ImageButton)getView().findViewById(R.id.pauseBtn);
         nextBtn = (ImageButton)getView().findViewById(R.id.nextBtn);
         smallBlind = (TextView)getView().findViewById(R.id.smallBlindValue);
+        smallBlind.setText(String.valueOf(sBlind));
         bigBlind = (TextView)getView().findViewById(R.id.bigBlindValue);
+        bigBlind.setText(String.valueOf(bBlind));
         resetButton = (Button)getView().findViewById(R.id.resetBtn);
 
         prevBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (currentBlind >= 1) {
+                    currentBlind--;
+                    startTime = BlindArray.get(currentBlind).getmTimer();
+                    sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                    bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                    timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                    smallBlind.setText(String.valueOf(sBlind));
+                    bigBlind.setText(String.valueOf(bBlind));
+
+                }
 
             }
         });
@@ -74,6 +129,13 @@ public class TimerFragment extends Fragment {
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (BlindArray.size() > 0){
+                    startTime = BlindArray.get(currentBlind).getmTimer();
+                    sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                    bBlind = BlindArray.get(currentBlind).getmBigBlind();
+
+                }
+
                 countDownTimer.start();
 
             }
@@ -82,6 +144,7 @@ public class TimerFragment extends Fragment {
         pauseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 countDownTimer.cancel();
 
             }
@@ -90,6 +153,16 @@ public class TimerFragment extends Fragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (currentBlind < BlindArray.size() -1) {
+                    currentBlind++;
+                    startTime = BlindArray.get(currentBlind).getmTimer();
+                    sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                    bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                    timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                    smallBlind.setText(String.valueOf(sBlind));
+                    bigBlind.setText(String.valueOf(bBlind));
+                }
+
 
             }
         });
@@ -97,7 +170,29 @@ public class TimerFragment extends Fragment {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                countDownTimer.onTick(startTime);
+                AlertDialog.Builder resetAlert = new AlertDialog.Builder(getActivity());
+                resetAlert.setMessage("Are you sure you want to reset the tournament?").setPositiveButton("Reset", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        currentBlind = 0;
+                        countDownTimer.cancel();
+                        startTime = BlindArray.get(currentBlind).getmTimer();
+                        sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                        bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                        timer.setText(""+String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                        smallBlind.setText(String.valueOf(sBlind));
+                        bigBlind.setText(String.valueOf(bBlind));
+                        countDownTimer.onTick(startTime);
+                    }
+                })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                resetAlert.show();
+
             }
         });
 
@@ -118,19 +213,24 @@ public class TimerFragment extends Fragment {
 
         @Override
         public void onTick(long millisUntilFinished) {
-            //timer.setText("" + millisUntilFinished/1000);
-            //timer.setText((millisUntilFinished/60000)+ ":" +(millisUntilFinished % 60000/1000));
-//            timer.setText(""+String.format("%d min, %d sec", TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
-//                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
-//                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
-            timer.setText(""+String.format("%d:%02d", TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
-                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+                timer.setText("" + String.format("%d:%02d", TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
+                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+
         }
 
         @Override
         public void onFinish() {
-
+            currentBlind++;
+            if (currentBlind < BlindArray.size() && currentBlind > 0) {
+                startTime = BlindArray.get(currentBlind).getmTimer();
+                sBlind = BlindArray.get(currentBlind).getmSmallBlind();
+                bBlind = BlindArray.get(currentBlind).getmBigBlind();
+                timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                smallBlind.setText(String.valueOf(sBlind));
+                bigBlind.setText(String.valueOf(bBlind));
+                countDownTimer.start();
+            }
         }
     }
 
@@ -147,7 +247,10 @@ public class TimerFragment extends Fragment {
                 Log.i(TAG, "add button pressed");
                 Intent blindListIntent = new Intent(getActivity(), BlindListActivity.class);
                 startActivity(blindListIntent);
+                getActivity().finish();
+
                 break;
+
             default:
                 break;
         }

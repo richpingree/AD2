@@ -46,7 +46,7 @@ public class BlindAdapter extends BaseAdapter {
         }
         BlindClass blind = getItem(position);
         TextView tv = (TextView) convertView.findViewById(R.id.blindTime);
-        tv.setText("Timer: " + String.valueOf(blind.getmTimer()));
+        tv.setText("Timer: " + String.valueOf(blind.getmTimer() / 60 / 1000));
         tv = (TextView) convertView.findViewById(R.id.smallBlind);
         tv.setText("Small Blind: " + String.valueOf(blind.getmSmallBlind()));
         tv = (TextView) convertView.findViewById(R.id.bigBlind);

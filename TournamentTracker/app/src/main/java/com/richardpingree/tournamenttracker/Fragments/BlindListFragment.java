@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -20,6 +21,7 @@ import android.widget.ListView;
 
 import com.richardpingree.tournamenttracker.BlindAdapter;
 import com.richardpingree.tournamenttracker.BlindClass;
+import com.richardpingree.tournamenttracker.MainActivity;
 import com.richardpingree.tournamenttracker.R;
 
 import java.util.ArrayList;
@@ -158,7 +160,7 @@ public class BlindListFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.tourney, menu);
+        inflater.inflate(R.menu.blind, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -169,6 +171,11 @@ public class BlindListFragment extends Fragment {
                 Log.i(TAG, "Add button clicked");
                 mListener.addBlind();
                 break;
+            case R.id.action_done:
+
+                Intent doneIntent = new Intent(getActivity(), MainActivity.class);
+                startActivity(doneIntent);
+                getActivity().finish();
             default:
                 break;
         }

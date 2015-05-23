@@ -13,6 +13,25 @@ import java.util.ArrayList;
  */
 public class BlindFileUtility {
 
+//    public static void saveBlinds(Context context, ArrayList<BlindClass> blindArrayList){
+//
+//        blindArrayList = loadBlinds(context);
+//        if (blindArrayList == null){
+//            blindArrayList = new ArrayList<BlindClass>();
+//        }
+//
+//        //blindArrayList.add(blinds);
+//
+//        try{
+//            FileOutputStream fos = context.openFileOutput("blinds", Context.MODE_PRIVATE);
+//            ObjectOutputStream oos = new ObjectOutputStream(fos);
+//            oos.writeObject(blindArrayList);
+//            oos.close();
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+
     public static void saveBlinds(Context context, BlindClass blinds){
 
         ArrayList<BlindClass> blindArrayList = loadBlinds(context);
@@ -32,7 +51,7 @@ public class BlindFileUtility {
         }
     }
 
-    private static ArrayList<BlindClass> loadBlinds(Context context) {
+    public static ArrayList<BlindClass> loadBlinds(Context context) {
 
         ArrayList<BlindClass> blindArrayList = null;
         try{

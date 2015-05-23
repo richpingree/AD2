@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.richardpingree.tournamenttracker.Fragments.BlindListFragment;
+import com.richardpingree.tournamenttracker.Fragments.TimerFragment;
 
 import java.util.ArrayList;
 
 /**
  * Created by Richard Pingree APD2 1505 on 5/20/15.
  */
-public class BlindListActivity extends Activity implements BlindListFragment.BlindListListener{
+public class BlindListActivity extends Activity implements BlindListFragment.BlindListListener, TimerFragment.TimerListener{
 
     private final String TAG = "BlindListA.Tag";
 
@@ -35,8 +36,10 @@ public class BlindListActivity extends Activity implements BlindListFragment.Bli
 
         mBlindArrayList = new ArrayList<BlindClass>();
 
-        mBlindArrayList.add(new BlindClass(30, 5, 10));
-        mBlindArrayList.add(new BlindClass(30, 10, 20));
+
+        if (BlindFileUtility.loadBlinds(this) != null){
+            mBlindArrayList = BlindFileUtility.loadBlinds(this);
+        }
 
     }
 
@@ -52,6 +55,13 @@ public class BlindListActivity extends Activity implements BlindListFragment.Bli
             newBlindLevel.mBigBlind = data.getIntExtra(ADDBLINDEXTRABIGBLIND, 0);
 
             mBlindArrayList.add(newBlindLevel);
+
+            if (newBlindLevel != null){
+                BlindFileUtility.saveBlinds(this, newBlindLevel);
+                //Log.i(TAG, "data saved");
+            }else{
+                //Log.i(TAG, "data did not save!");
+            }
 
             BlindListFragment blf = (BlindListFragment)getFragmentManager().findFragmentById(R.id.container);
             try{

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark">
+    android:background="@color/blue">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="40dp"
+        android:textColor="@android:color/white"
         android:id="@+id/timerView"
         android:text="00:00"
         android:layout_alignParentTop="true"
@@ -27,24 +28,28 @@
             <ImageButton
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:background="@color/blue"
                 android:id="@+id/previousBtn"
                 android:src="@android:drawable/ic_media_previous"/>
 
             <ImageButton
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:background="@color/blue"
                 android:id="@+id/playBtn"
                 android:src="@android:drawable/ic_media_play"/>
 
             <ImageButton
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:background="@color/blue"
                 android:id="@+id/pauseBtn"
                 android:src="@android:drawable/ic_media_pause"/>
 
             <ImageButton
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:background="@color/blue"
                 android:id="@+id/nextBtn"
                 android:src="@android:drawable/ic_media_next"/>
         </TableRow>
@@ -61,7 +66,8 @@
             android:layout_marginLeft="40dp"
             android:id="@+id/smallBlindLabel"
             android:text="Small Blind"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,6 +75,7 @@
             android:text="Big Blind"
             android:id="@+id/bigBlindLabel"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="40dp" />
@@ -78,6 +85,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/smallBlindValue"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
             android:text="0"
             android:layout_below="@+id/smallBlindLabel"
             android:layout_alignEnd="@+id/smallBlindLabel"
@@ -88,6 +96,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/bigBlindValue"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
             android:text="0"
             android:layout_below="@+id/bigBlindLabel"
             android:layout_alignEnd="@+id/bigBlindLabel"

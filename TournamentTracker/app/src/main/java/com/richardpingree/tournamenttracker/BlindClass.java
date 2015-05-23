@@ -22,7 +22,7 @@ public class BlindClass implements Serializable{
     }
 
     public int getmTimer(){
-        return mTimer;
+        return mTimer * 60 * 1000;
     }
 
     public void setmTimer(){
