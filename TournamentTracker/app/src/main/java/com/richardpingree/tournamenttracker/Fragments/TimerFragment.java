@@ -36,7 +36,6 @@ public class TimerFragment extends Fragment {
     private final String TAG = "TimerFragment.TAG";
 
     public static final int ADDEXTRAS = 0;
-    public static final String ADDARRAYEXTRAS = "add Array";
     private TimerListener mListener;
     private CountDownTimer countDownTimer;
     private long startTime = 60 * 1000;
