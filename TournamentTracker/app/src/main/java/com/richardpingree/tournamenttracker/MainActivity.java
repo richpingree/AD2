@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.richardpingree.tournamenttracker.Fragments.PokerHandsFragment;
 import com.richardpingree.tournamenttracker.Fragments.TimerFragment;
 import com.richardpingree.tournamenttracker.Fragments.TournamentListFragment;
 
@@ -113,8 +114,14 @@ public class MainActivity extends Activity
                 break;
             case 1:
                 getFragmentManager().beginTransaction().replace(R.id.container, new TournamentListFragment()).commit();
-//                Intent tourneyListIntent = new Intent(this, TournamentListActivity.class);
-//                startActivity(tourneyListIntent);
+                break;
+            case 2:
+
+                break;
+            case 3:
+                getFragmentManager().beginTransaction().replace(R.id.container, new PokerHandsFragment()).commit();
+                break;
+
         }
     }
 
@@ -129,6 +136,8 @@ public class MainActivity extends Activity
             case 3:
                 mTitle = getString(R.string.title_section3);
                 break;
+            case 4:
+                mTitle = getString(R.string.titel_section4);
         }
     }
 

@@ -41,7 +41,7 @@ public class TimerFragment extends Fragment {
     private long startTime = 60 * 1000;
     private final long interval = 1 * 1000;
     private ArrayList<BlindClass> BlindArray;
-    long timeremaining;
+    public long timeremaining;
     int sBlind, bBlind;
     int currentBlind = 0;
     TextView timer, smallBlind, bigBlind;
@@ -134,7 +134,6 @@ public class TimerFragment extends Fragment {
                     bBlind = BlindArray.get(currentBlind).getmBigBlind();
 
                 }
-
                 countDownTimer.start();
 
             }
@@ -143,8 +142,23 @@ public class TimerFragment extends Fragment {
         pauseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.i(TAG, "Cancel Button Clicked" + String.valueOf(timeremaining));
                 countDownTimer.cancel();
+                timer.setText("" + String.format("%d:%02d", TimeUnit.MILLISECONDS.toMinutes(timeremaining),
+                        TimeUnit.MILLISECONDS.toSeconds(timeremaining) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(timeremaining))));
+                AlertDialog.Builder pauseAlert = new AlertDialog.Builder(getActivity());
+                pauseAlert.setMessage("The Blinds Are Pause!").setPositiveButton("Resume", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                       // timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(timeremaining)));
+                       // countDownTimer.onTick(startTime - timeremaining);
+                        countDownTimer.start();
+                    }
+                });
+
+                pauseAlert.show();
 
             }
         });
@@ -194,7 +208,7 @@ public class TimerFragment extends Fragment {
                     resetAlert.show();
                 }else{
                     countDownTimer.cancel();
-                    timer.setText(""+String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
+                    timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
                 }
             }
         });
@@ -202,6 +216,8 @@ public class TimerFragment extends Fragment {
     }
 
     public class MyCountDownTimer extends CountDownTimer{
+
+        //public long timeremaining;
 
         /**
          * @param startTime    The number of millis in the future from the call
@@ -219,6 +235,8 @@ public class TimerFragment extends Fragment {
                 timer.setText("" + String.format("%d:%02d", TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
                                 TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+
+            timeremaining = millisUntilFinished;
 
         }
 
