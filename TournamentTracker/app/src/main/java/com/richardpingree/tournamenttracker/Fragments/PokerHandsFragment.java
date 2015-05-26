@@ -38,6 +38,8 @@ public class PokerHandsFragment extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getActivity().getActionBar().setTitle(R.string.title_section4);
+
         title = (TextView)getView().findViewById(R.id.Title);
         title.setTextColor(Color.WHITE);
         title.setText("Hand Strengths");

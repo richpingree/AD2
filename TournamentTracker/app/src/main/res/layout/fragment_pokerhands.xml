@@ -26,7 +26,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/royalFlush" />
             </TableRow>
@@ -44,7 +44,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/straightFlush" />
             </TableRow>
@@ -62,7 +62,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/fourKind" />
             </TableRow>
@@ -80,7 +80,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/fullHouse" />
             </TableRow>
@@ -98,7 +98,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/flush" />
             </TableRow>
@@ -116,7 +116,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/straight" />
             </TableRow>
@@ -134,7 +134,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/threeKind" />
             </TableRow>
@@ -152,7 +152,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/twoPair" />
             </TableRow>
@@ -170,7 +170,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/pair" />
             </TableRow>
@@ -188,7 +188,7 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:layout_width="350dp"
-                    android:layout_height="125dp"
+                    android:layout_height="100dp"
                     android:scaleType="fitXY"
                     android:id="@+id/highcard" />
             </TableRow>

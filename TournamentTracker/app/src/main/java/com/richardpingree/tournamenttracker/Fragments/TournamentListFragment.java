@@ -68,6 +68,8 @@ public class TournamentListFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
 
+        getActivity().getActionBar().setTitle(R.string.title_section2);
+
         ListView tourneyListView = (ListView) getView().findViewById(R.id.tourneyList);
         mAdapter = new TournamentAdapter(getActivity(), mListener.getTournaments());
         tourneyListView.setAdapter(mAdapter);
