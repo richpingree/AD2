@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.richardpingree.tournamenttracker.Fragments.PokerHandsFragment;
+import com.richardpingree.tournamenttracker.Fragments.ProbsandOddsFragment;
 import com.richardpingree.tournamenttracker.Fragments.TimerFragment;
 import com.richardpingree.tournamenttracker.Fragments.TournamentListFragment;
 
@@ -116,11 +117,12 @@ public class MainActivity extends Activity
                 getFragmentManager().beginTransaction().replace(R.id.container, new TournamentListFragment()).commit();
                 break;
             case 2:
-
+                getFragmentManager().beginTransaction().replace(R.id.container, new ProbsandOddsFragment()).commit();
                 break;
             case 3:
                 getFragmentManager().beginTransaction().replace(R.id.container, new PokerHandsFragment()).commit();
                 break;
+
 
         }
     }
