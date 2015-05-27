@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TableRow >
+            <TableRow android:padding="10dp" >
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
@@ -40,6 +40,16 @@
                     android:gravity="center_horizontal"/>
             </TableRow>
 
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
+            </TableRow>
+
             <TableRow android:gravity="center_horizontal">
                 <ImageView
                     android:layout_marginLeft="10dp"
@@ -56,6 +66,16 @@
                     android:id="@+id/straightflushdescription"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title3"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
             </TableRow>
 
             <TableRow android:gravity="center_horizontal">
@@ -76,6 +96,16 @@
                     android:gravity="center_horizontal"/>
             </TableRow>
 
+            <TableRow android:padding="10dp" >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title4"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
+            </TableRow>
+
             <TableRow android:gravity="center_horizontal">
                 <ImageView
                     android:layout_marginLeft="10dp"
@@ -92,6 +122,16 @@
                     android:id="@+id/fulldescription"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title5"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
             </TableRow>
 
             <TableRow android:gravity="center_horizontal">
@@ -112,6 +152,16 @@
                     android:gravity="center_horizontal"/>
             </TableRow>
 
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title6"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
+            </TableRow>
+
             <TableRow android:gravity="center_horizontal">
                 <ImageView
                     android:layout_marginLeft="10dp"
@@ -128,6 +178,16 @@
                     android:id="@+id/straightdescription"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title7"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
             </TableRow>
 
             <TableRow android:gravity="center_horizontal">
@@ -148,6 +208,16 @@
                     android:gravity="center_horizontal"/>
             </TableRow>
 
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title8"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
+            </TableRow>
+
             <TableRow android:gravity="center_horizontal">
                 <ImageView
                     android:layout_marginLeft="10dp"
@@ -164,6 +234,16 @@
                     android:id="@+id/twopairdescription"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title9"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
             </TableRow>
 
             <TableRow android:gravity="center_horizontal">
@@ -183,6 +263,17 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:gravity="center_horizontal"/>
             </TableRow>
+
+            <TableRow android:padding="10dp">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/Title10"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center_horizontal"
+                    />
+            </TableRow>
+
 
             <TableRow android:gravity="center_horizontal">
                 <ImageView
