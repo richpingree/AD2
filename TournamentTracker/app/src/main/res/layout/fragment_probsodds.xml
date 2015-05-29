@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
 
@@ -18,14 +23,11 @@
             </TableRow>
         </TableLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/blue">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
 
             <TableRow android:padding="5dp">
                 <TextView
@@ -525,7 +527,7 @@
             </TableRow>
         </TableLayout>
 
-    </ScrollView>
+
 
         <TableLayout
             android:layout_width="match_parent"
@@ -540,14 +542,12 @@
             </TableRow>
         </TableLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/blue">
+
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
 
             <TableRow android:padding="5dp">
                 <TextView
@@ -684,7 +684,7 @@
 
         </TableLayout>
 
-    </ScrollView>
+
 
 
         <TableLayout
@@ -700,14 +700,12 @@
             </TableRow>
         </TableLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/blue">
+
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
 
             <TableRow android:padding="5dp">
                 <TextView
@@ -1078,7 +1076,6 @@
 
         </TableLayout>
 
-    </ScrollView>
 
         <TableLayout
             android:layout_width="match_parent"
@@ -1088,13 +1085,329 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:id="@+id/POtitle4"/>
             </TableRow>
         </TableLayout>
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue">
+
+        <TableRow android:padding="5dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:id="@+id/po4nameLabel1"
+                android:text="Situation"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:id="@+id/po4nameLabel2"
+                android:text="Hands"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:id="@+id/po4nameLabel3"
+                android:text="Odds"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:id="@+id/po4nameLabel4"
+                android:text="Percent"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name1"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand1"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob1"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd1"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name2"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand2"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob2"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd2"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name3"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand3"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob3"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd3"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name4"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand4"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob4"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd4"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name5"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand5"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob5"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd5"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name6"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand6"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob6"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd6"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name7"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand7"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob7"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd7"
+                android:text="331-1"/>
+        </TableRow>
+
+        <TableRow android:padding="10dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4name8"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4hand8"
+                android:text="A-Ks or any specific suited cards"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4prob8"
+                android:text=".3"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/po4odd8"
+                android:text="331-1"/>
+        </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
 
 
-
-
-</LinearLayout>
+</ScrollView>

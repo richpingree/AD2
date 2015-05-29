@@ -29,7 +29,10 @@ public class ProbsandOddsFragment extends Fragment {
             po3name3, po3prob3, po3odd3, po3name4, po3prob4, po3odd4, po3name5, po3prob5, po3odd5,
             po3name6, po3prob6, po3odd6, po3name7, po3prob7, po3odd7, po3name8, po3prob8, po3odd8,
             po3name9, po3prob9, po3odd9, po3name10, po3prob10, po3odd10, po3name11, po3prob11, po3odd11,
-            po3name12, po3prob12, po3odd12, po3name13, po3prob13, po3odd13;
+            po3name12, po3prob12, po3odd12, po3name13, po3prob13, po3odd13, po4title, po4name1, po4hand1, po4prob1, po4odd1,
+            po4name2, po4hand2, po4prob2, po4odd2, po4name3, po4hand3,po4prob3, po4odd3, po4name4, po4hand4, po4prob4, po4odd4,
+            po4name5, po4hand5, po4prob5, po4odd5, po4name6, po4hand6, po4prob6, po4odd6,
+            po4name7, po4hand7, po4prob7, po4odd7, po4name8, po4hand8, po4prob8, po4odd8;
 
     public ProbsandOddsFragment(){
 
@@ -46,11 +49,13 @@ public class ProbsandOddsFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        po1title = (TextView)getView().findViewById(R.id.POtitle1);
+        getActivity().getActionBar().setTitle(R.string.title_section3);
+
+        po1title = (TextView) getView().findViewById(R.id.POtitle1);
         po1title.setTextColor(Color.BLACK);
         po1title.setText("Odds of being dealt certain starting hands");
 
-        po1name1 = (TextView)getView().findViewById(R.id.po1name1);
+        po1name1 = (TextView) getView().findViewById(R.id.po1name1);
         po1name1.setTextColor(Color.WHITE);
         po1name1.setText("A-Ks or any specific suited cards");
         po1prob1 = (TextView)getView().findViewById(R.id.po1prob1);
@@ -70,7 +75,7 @@ public class ProbsandOddsFragment extends Fragment {
         po1odd2.setTextColor(Color.WHITE);
         po1odd2.setText("220-1");
 
-        po1name3 = (TextView)getView().findViewById(R.id.po1name3);
+        po1name3 = (TextView) getView().findViewById(R.id.po1name3);
         po1name3.setTextColor(Color.WHITE);
         po1name3.setText("A-Ks, K-Qs, Q-Js, \n or J-10s (suited cards)");
         po1prob3 = (TextView)getView().findViewById(R.id.po1prob3);
@@ -150,7 +155,7 @@ public class ProbsandOddsFragment extends Fragment {
         po1odd10.setTextColor(Color.WHITE);
         po1odd10.setText("24.5-1");
 
-        po1name11 = (TextView)getView().findViewById(R.id.po1name11);
+        po1name11 = (TextView) getView().findViewById(R.id.po1name11);
         po1name11.setTextColor(Color.WHITE);
         po1name11.setText("Connected cards, 10 or better");
         po1prob11 = (TextView)getView().findViewById(R.id.po1prob11);
@@ -190,7 +195,7 @@ public class ProbsandOddsFragment extends Fragment {
         po1odd14.setTextColor(Color.WHITE);
         po1odd14.setText("10.1-1");
 
-        po1name15 = (TextView)getView().findViewById(R.id.po1name15);
+        po1name15 = (TextView) getView().findViewById(R.id.po1name15);
         po1name15.setTextColor(Color.WHITE);
         po1name15.setText("Any two cards with \n rank at least 10");
         po1prob15 = (TextView)getView().findViewById(R.id.po1prob15);
@@ -264,7 +269,7 @@ public class ProbsandOddsFragment extends Fragment {
         po2odd3.setTextColor(Color.WHITE);
         po2odd3.setText("11.8%");
 
-        po2name4 = (TextView)getView().findViewById(R.id.po2name4);
+        po2name4 = (TextView) getView().findViewById(R.id.po2name4);
         po2name4.setTextColor(Color.WHITE);
         po2name4.setText("A pair \n (matching one of your holecards)");
         po2prob4 = (TextView)getView().findViewById(R.id.po2prob4);
@@ -407,6 +412,115 @@ public class ProbsandOddsFragment extends Fragment {
         po3odd13 = (TextView)getView().findViewById(R.id.po3odd13);
         po3odd13.setTextColor(Color.WHITE);
         po3odd13.setText("0%");
+
+        po4title = (TextView)getView().findViewById(R.id.POtitle4);
+        po4title.setTextColor(Color.BLACK);
+        po4title.setText("Odds of two hands vs. each other preflop");
+
+        po4name1 = (TextView)getView().findViewById(R.id.po4name1);
+        po4name1.setTextColor(Color.WHITE);
+        po4name1.setText("High Pair \n vs. \n Lower Pair");
+        po4hand1 = (TextView)getView().findViewById(R.id.po4hand1);
+        po4hand1.setTextColor(Color.WHITE);
+        po4hand1.setText("Js Jc \n vs. \n 7h 7d");
+        po4prob1 = (TextView)getView().findViewById(R.id.po4prob1);
+        po4prob1.setTextColor(Color.WHITE);
+        po4prob1.setText("4.09-1");
+        po4odd1 = (TextView)getView().findViewById(R.id.po4odd1);
+        po4odd1.setTextColor(Color.WHITE);
+        po4odd1.setText("80.3% \n vs. \n 19.7%");
+
+        po4name2 = (TextView)getView().findViewById(R.id.po4name2);
+        po4name2.setTextColor(Color.WHITE);
+        po4name2.setText("Pair \n vs. \n Two High Cards");
+        po4hand2 = (TextView)getView().findViewById(R.id.po4hand2);
+        po4hand2.setTextColor(Color.WHITE);
+        po4hand2.setText("7s 7c \n vs. \n Ah Jd");
+        po4prob2 = (TextView)getView().findViewById(R.id.po4prob2);
+        po4prob2.setTextColor(Color.WHITE);
+        po4prob2.setText("1.23-1");
+        po4odd2 = (TextView)getView().findViewById(R.id.po4odd2);
+        po4odd2.setTextColor(Color.WHITE);
+        po4odd2.setText("55.1% \n vs. \n 44.9%");
+
+        po4name3 = (TextView)getView().findViewById(R.id.po4name3);
+        po4name3.setTextColor(Color.WHITE);
+        po4name3.setText("Pair \n vs. \n Two Lower Cards");
+        po4hand3 = (TextView)getView().findViewById(R.id.po4hand3);
+        po4hand3.setTextColor(Color.WHITE);
+        po4hand3.setText("Qs Qc \n vs. \n 9h 7d");
+        po4prob3 = (TextView)getView().findViewById(R.id.po4prob3);
+        po4prob3.setTextColor(Color.WHITE);
+        po4prob3.setText("4.77-1");
+        po4odd3 = (TextView)getView().findViewById(R.id.po4odd3);
+        po4odd3.setTextColor(Color.WHITE);
+        po4odd3.setText("82.7% \n vs. \n 17.3%");
+
+        po4name4 = (TextView)getView().findViewById(R.id.po4name4);
+        po4name4.setTextColor(Color.WHITE);
+        po4name4.setText("Pair \n vs. \n a Higher and Lower Card");
+        po4hand4 = (TextView)getView().findViewById(R.id.po4hand4);
+        po4hand4.setTextColor(Color.WHITE);
+        po4hand4.setText("Js Jc \n vs. \n Ah 7d");
+        po4prob4 = (TextView)getView().findViewById(R.id.po4prob4);
+        po4prob4.setTextColor(Color.WHITE);
+        po4prob4.setText("2.50-1");
+        po4odd4 = (TextView)getView().findViewById(R.id.po4odd4);
+        po4odd4.setTextColor(Color.WHITE);
+        po4odd4.setText("71.4% \n vs. \n 28.6%");
+
+        po4name5 = (TextView)getView().findViewById(R.id.po4name5);
+        po4name5.setTextColor(Color.WHITE);
+        po4name5.setText("Two Higher Cards \n vs. \n Two Lower Cards");
+        po4hand5 = (TextView)getView().findViewById(R.id.po4hand5);
+        po4hand5.setTextColor(Color.WHITE);
+        po4hand5.setText("Qs Jc \n vs. \n 6h 5d");
+        po4prob5 = (TextView)getView().findViewById(R.id.po4prob5);
+        po4prob5.setTextColor(Color.WHITE);
+        po4prob5.setText("1.70-1");
+        po4odd5 = (TextView)getView().findViewById(R.id.po4odd5);
+        po4odd5.setTextColor(Color.WHITE);
+        po4odd5.setText("62.9% \n vs. \n 37.1%");
+
+        po4name6 = (TextView)getView().findViewById(R.id.po4name6);
+        po4name6.setTextColor(Color.WHITE);
+        po4name6.setText("Higher & Lower Card \n vs. \n Two Middle Cards");
+        po4hand6 = (TextView)getView().findViewById(R.id.po4hand6);
+        po4hand6.setTextColor(Color.WHITE);
+        po4hand6.setText("As 6c \n vs. \n Jh 9d");
+        po4prob6 = (TextView)getView().findViewById(R.id.po4prob6);
+        po4prob6.setTextColor(Color.WHITE);
+        po4prob6.setText("1.27-1");
+        po4odd6 = (TextView)getView().findViewById(R.id.po4odd6);
+        po4odd6.setTextColor(Color.WHITE);
+        po4odd6.setText("55.9% \n vs. \n 44.1%");
+
+        po4name7 = (TextView)getView().findViewById(R.id.po4name7);
+        po4name7.setTextColor(Color.WHITE);
+        po4name7.setText("Highest & 3rd Highest Card \n vs. \n 2nd Highest & Lowest Card");
+        po4hand7 = (TextView)getView().findViewById(R.id.po4hand7);
+        po4hand7.setTextColor(Color.WHITE);
+        po4hand7.setText("As 6c \n vs. \n Jh 2d");
+        po4prob7 = (TextView)getView().findViewById(R.id.po4prob7);
+        po4prob7.setTextColor(Color.WHITE);
+        po4prob7.setText("1.73-1");
+        po4odd7 = (TextView)getView().findViewById(R.id.po4odd7);
+        po4odd7.setTextColor(Color.WHITE);
+        po4odd7.setText("63.3% \n vs. \n 36,7%");
+
+        po4name8 = (TextView)getView().findViewById(R.id.po4name8);
+        po4name8.setTextColor(Color.WHITE);
+        po4name8.setText("Highest & Common Card \n vs. \n Lowest and Common Card");
+        po4hand8 = (TextView)getView().findViewById(R.id.po4hand8);
+        po4hand8.setTextColor(Color.WHITE);
+        po4hand8.setText("As Jc \n vs. \n Jh 9d");
+        po4prob8 = (TextView)getView().findViewById(R.id.po4prob8);
+        po4prob8.setTextColor(Color.WHITE);
+        po4prob8.setText("2.74-1");
+        po4odd8 = (TextView)getView().findViewById(R.id.po4odd8);
+        po4odd8.setTextColor(Color.WHITE);
+        po4odd8.setText("73.3% \n vs. \n 26.7%");
+
 
     }
 }
