@@ -87,6 +87,8 @@ public class TimerFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
 
+        getActivity().getActionBar().setTitle(R.string.title_section1);
+
         mplayer = MediaPlayer.create(getActivity(), R.raw.testalarm);
 
 
