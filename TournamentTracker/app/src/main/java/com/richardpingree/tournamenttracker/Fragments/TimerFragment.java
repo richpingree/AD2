@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -48,6 +49,8 @@ public class TimerFragment extends Fragment {
     ImageButton prevBtn, playBtn, pauseBtn, nextBtn;
     Button resetButton;
 
+    private MediaPlayer mplayer;
+
     public interface TimerListener {
         public ArrayList<BlindClass> getBlinds();
     }
@@ -84,6 +87,10 @@ public class TimerFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         setHasOptionsMenu(true);
 
+        mplayer = MediaPlayer.create(getActivity(), R.raw.testalarm);
+
+
+
         BlindArray = mListener.getBlinds();
 
         //Log.i(TAG, String.valueOf(BlindArray.get(0).getmTimer()) + " " + String.valueOf(BlindArray.get(0).getmSmallBlind()) + " " + String.valueOf(BlindArray.get(0).getmBigBlind()));
@@ -111,6 +118,7 @@ public class TimerFragment extends Fragment {
         prevBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mplayer.start();
                 if (currentBlind >= 1) {
                     currentBlind--;
                     startTime = BlindArray.get(currentBlind).getmTimer();
@@ -166,6 +174,7 @@ public class TimerFragment extends Fragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mplayer.start();
                 if (currentBlind < BlindArray.size() -1) {
                     currentBlind++;
                     startTime = BlindArray.get(currentBlind).getmTimer();
@@ -242,6 +251,8 @@ public class TimerFragment extends Fragment {
 
         @Override
         public void onFinish() {
+
+            mplayer.start();
             if (BlindArray.size() > 0) {
                 currentBlind++;
                 if (currentBlind < BlindArray.size() && currentBlind > 0) {
