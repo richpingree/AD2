@@ -39,7 +39,7 @@ public class TimerFragment extends Fragment {
     public static final int ADDEXTRAS = 0;
     private TimerListener mListener;
     private CountDownTimer countDownTimer;
-    private long startTime = 60 * 1000;
+    private long startTime = 1800 * 1000;
     private final long interval = 1 * 1000;
     private ArrayList<BlindClass> BlindArray;
     public long timeremaining;
@@ -120,8 +120,8 @@ public class TimerFragment extends Fragment {
         prevBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mplayer.start();
                 if (currentBlind >= 1) {
+                    countDownTimer.cancel();
                     currentBlind--;
                     startTime = BlindArray.get(currentBlind).getmTimer();
                     sBlind = BlindArray.get(currentBlind).getmSmallBlind();
@@ -129,6 +129,7 @@ public class TimerFragment extends Fragment {
                     timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
                     smallBlind.setText(String.valueOf(sBlind));
                     bigBlind.setText(String.valueOf(bBlind));
+                    countDownTimer.start();
 
                 }
 
@@ -176,8 +177,10 @@ public class TimerFragment extends Fragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mplayer.start();
+
                 if (currentBlind < BlindArray.size() -1) {
+                    mplayer.start();
+                    countDownTimer.cancel();
                     currentBlind++;
                     startTime = BlindArray.get(currentBlind).getmTimer();
                     sBlind = BlindArray.get(currentBlind).getmSmallBlind();
@@ -185,6 +188,7 @@ public class TimerFragment extends Fragment {
                     timer.setText("" + String.format("%d:00", TimeUnit.MILLISECONDS.toMinutes(startTime)));
                     smallBlind.setText(String.valueOf(sBlind));
                     bigBlind.setText(String.valueOf(bBlind));
+                    countDownTimer.start();
                 }
 
 
